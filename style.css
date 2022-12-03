@@ -1,15 +1,268 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
-.header{
-    min-height: 100vh;
+
+/*opening*/
+.background{
     width:100%;
     height: 100vh;
-    background-image:  linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
     position: relative;
     padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comp-logo{
+    width: 70px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 55px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+}
+
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li:hover:after{
+    width: 100%;
+}
+
+.page-1{
+    text-align: center;
+}
+
+.page-1 h1{
+    font-size: 70px;
+    color: aliceblue;
+    transition: 0.5ms;
+    
+}
+
+.page-1 h1:hover{
+    -webkit-text-stroke: 2px #ffff;
+    color:transparent ;
+
+}
+
+.page-1 a{
+    text-decoration:none ;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 20px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+.page-1 a:hover{
+    border: 1px solid #fff;
+    background:greenyellow;
+    transition: 1s;
+}
+
+.video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media(min-aspect-ratio:16/9){
+    .video{
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+@media(max-aspect-ratio:16/9){
+    .video{
+        width: auto;
+        height: 100%;
+
+    }
+}
+@media(max-width:700px){
+    .page-1 h1{
+        font-size: 40px;
+    }
+    .page-1 a{
+        border-radius: 20px;
+        font-size: 15px;
+        padding: 10px 50px;
+    }
+}
+
+/*-------service--------*/
+.services{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 50;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.service-col{
+    flex-basis: 31%;
+    background:rgb(214, 244, 255);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.service-col1 img{
+    width: 20%;
+    border-radius: 10px;
+}
+
+.service-col2 img{
+    width: 20%;
+    border-radius: 10px;
+}
+
+.service-col3 img{
+    width: 20%;
+    border-radius: 10px;
+}
+
+
+.service-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*----footer----*/
+.footer{
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: #fff;
+    display:flex;
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-2{
+    flex-grow: 2;
+}
+
+.footer div h3{
+    font-weight: 300;
+    margin: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+form input{
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 13px;
+    cursor:pointer;
+}
+
+form button:hover{
+    background: greenyellow;
+    transition: 1s;
+}
+
+.col-3 p{
+    color: #fff;
+}
+
+.socials{
+    margin-top: 30px;
+}
+
+.socials i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+

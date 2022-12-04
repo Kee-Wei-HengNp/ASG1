@@ -427,9 +427,6 @@ body{
     margin: 0;
     padding: 0;
     text-align: center;
-    background: url(transport.jpg);
-    background-size: cover;
-    font-family:sans-serif ;
 }
 
 .contactpg-title{
@@ -454,7 +451,7 @@ form{
 
 .contact-form{
     width: 600px;
-    background: white;
+    background: grey;
     border: none;
     outline: none;
     border-bottom: 1px solid black;

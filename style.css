@@ -31,19 +31,23 @@ nav{
     width: 70px;
 }
 
-nav ul li{
+.comp-logo:hover{
+    background: transparent;
+    margin-top: 5px;
+}
+
+.nav-links ul li{
     list-style-type: none;
     display: inline-block;
     margin-left: 55px;
 }
-
-nav ul li a{
+.nav-links ul li a{
     text-decoration: none;
     color: aliceblue;
     font-size: 15px;
 }
 
-nav ul li::after{
+.nav-links ul li::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -53,7 +57,7 @@ nav ul li::after{
     transition: 0.5s;
 }
 
-nav ul li:hover:after{
+.nav-links ul li:hover:after{
     width: 100%;
 }
 
@@ -132,12 +136,12 @@ nav ul li:hover:after{
     padding-top: 100px;
 }
 
-h1{
+.services h1{
     font-size: 36px;
     font-weight: 600;
 }
 
-p{
+.services p{
     color: black;
     font-size: 14px;
     font-weight: 50;
@@ -182,7 +186,7 @@ p{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
-h3{
+.row h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
@@ -225,7 +229,7 @@ h3{
     margin-bottom: 10px;
 }
 
-form input{
+.col-2 form input{
     width: 400px;
     height: 45px;
     border-radius: 4px;
@@ -235,7 +239,7 @@ form input{
     outline: none;
     border: none;
 }
-form button{
+.col-2 button{
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
@@ -245,7 +249,7 @@ form button{
     cursor:pointer;
 }
 
-form button:hover{
+.col-2 button:hover{
     background: greenyellow;
     transition: 1s;
 }
@@ -264,5 +268,207 @@ form button:hover{
     cursor: pointer;
 }
 
+
+
+/* sign in and sign up page*/
+.box{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(groceryshopping.png.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box h1{
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.form-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+}
+
+.left{
+    padding: 50px;
+    background: #9efc9e;
+    flex-basis: 50%;
+    flex-grow: 1;
+    color: white;
+}
+
+.right{
+    padding: 50px;
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.input-box{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid white;
+    outline: none;
+    color: black;
+    font-size: 12px;
+    background: white;
+    max-height: 65px;
+    transition:  0.5s;
+    box-shadow: 0px 0px 0 lightgreen;
+}
+
+#name-field{
+    transition: max-height 0.5s;
+    overflow: hidden;
+
+}
+
+.input-box::placeholder{
+    color: #555;
+}
+.input-box:hover{
+    box-shadow: 8px 10px 0 lightgreen;
+
+}
+
+form p{
+    text-align: left;
+    font-size: 13px;
+}
+
+form p a{
+    text-decoration: none;
+    color: #3c0020;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button{
+    flex-basis: 48%;
+    background:green;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn button:hover{
+    font-weight: 500;
+    background: #000;
+    color: white;
+}
+
+.btn button.disabled{
+    background: #eaeaea;
+    color: #555;
+}
+
+.btn button span{
+    display: inline-block;
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+.btn button:hover span{
+    width: 30px;
+}
+
+.right a{
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    min-width: 250px;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+.right a i{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.fb{
+    background: royalblue;
+}
+
+.tw{
+    background: lightskyblue;
+}
+
+.ggl{
+    background: lightcoral;
+}
+
+
+
+/*contact us page*/
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url(transport.jpg);
+    background-size: cover;
+    font-family:sans-serif ;
+}
+
+.contactpg-title{
+    margin-top: 100px;
+    color: #fff;
+}
+
+.title h1{
+    font-size: 32px;
+    line-height: 10px;
+}
+
+.title h2{
+    font-size: 16px;
+    color: #eaeaea;
+}
+
+form{
+    margin-top: 50px;
+
+}
+
+.contact-form{
+    width: 600px;
+    background: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+input{
+    height: 45px;
+}
+
+form .submit{
+    background: #9efc9e;
+}
 
 
